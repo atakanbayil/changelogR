@@ -1,0 +1,46 @@
+# .github/release.yml
+# Controls the "Generate release notes" button output.
+
+changelog:
+  # Hide anything that shouldn't appear as "Other changes".
+  exclude:
+    labels:
+      - skip-changelog
+      - docs
+      - documentation
+      - style
+      - test
+      - tests
+      - chore
+      - ci
+      - build
+      - dependencies
+      - deps
+      - release
+      - upgrade
+      - conflict
+    authors:
+      - dependabot[bot]
+      - renovate[bot]
+
+  # Show ONLY these 5 categories, in this order.
+  categories:
+    - title: "NEW COMPONENT"
+      labels:
+        - new-component
+
+    - title: "NEW FEATURE"
+      labels:
+        - feat
+
+    - title: "BUG FIX"
+      labels:
+        - bug
+
+    - title: "REFACTOR"
+      labels:
+        - refactor
+
+    - title: "DOCUMENTATION"
+      labels:
+        - docs
