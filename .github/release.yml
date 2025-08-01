@@ -4,43 +4,31 @@
 changelog:
   # Hide anything that shouldn't appear as "Other changes".
   exclude:
-    labels:
-      - skip-changelog
-      - docs
-      - documentation
-      - style
-      - test
-      - tests
-      - chore
-      - ci
-      - build
-      - dependencies
-      - deps
-      - release
-      - upgrade
-      - conflict
-    authors:
+    autors:
       - dependabot[bot]
       - renovate[bot]
 
-  # Show ONLY these 5 categories, in this order.
   categories:
-    - title: "NEW COMPONENT"
+    - title: "New Component 🚀"
       labels:
-        - new-component
+        - new component
 
-    - title: "NEW FEATURE"
+    - title: "New Feature 🎉"
       labels:
-        - feat
+        - new feature
 
-    - title: "BUG FIX"
+    - title: "Bug Fix 🐛"
       labels:
         - bug
 
-    - title: "REFACTOR"
+    - title: "Refactor ✏️"
       labels:
         - refactor
 
-    - title: "DOCUMENTATION"
+    - title: "Documentation 📚"
       labels:
-        - docs
+        - documentation
+        
+    - title: "Breaking Changes 💥"
+      labels: 
+        - breaking changes
