@@ -2,17 +2,30 @@
 # Controls the "Generate release notes" button output.
 
 changelog:
+  # Hide anything that shouldn't appear as "Other changes".
   exclude:
+    labels:
+      - skip-changelog
+      - style
+      - test
+      - tests
+      - chore
+      - build
+      - dependencies
+      - deps
+      - release
+      - upgrade
+      - conflict
     autors:
       - dependabot[bot]
       - renovate[bot]
 
   categories:
-    - title: "New Component 🚀"
+    - title: "New Component"
       labels:
         - new component
 
-    - title: "New Feature 🎉"
+    - title: "New Feature 🚀"
       labels:
         - new feature
 
