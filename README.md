@@ -1,6 +1,6 @@
 # @takeoff-ui/core
 
-![Takeoff UI Hero](image.png)
+![Takeoff UI Hero](takeoff-og.jpg)
 
 Core **Stencil.js Web Components** for TakeOff UI. Standards-based, framework-agnostic components that run anywhere, with first-class bindings for **React**, **Vue**, and **Angular**.
 
