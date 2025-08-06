@@ -15,3 +15,7 @@ Core **Stencil.js Web Components** for TakeOff UI. Standards-based, framework-ag
 Full guides, API, and examples:  
 https://takeoff-ui-blond.vercel.app/docs/Introduction
 
+## Contributors
+<a href="https://github.com/atakanbayil/changelogR/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=atakanbayil/changelogR" />
+</a>
