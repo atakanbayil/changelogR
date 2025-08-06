@@ -5,42 +5,31 @@ on:
 
 jobs:
   check-labels:
+    name: label-check
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: write   # to close PRs
-      issues: write          # to comment
+      pull-requests: write   # to comment
+      issues: write
     steps:
       - name: Validate labels
-        id: validate
         uses: actions/github-script@v7
         with:
           script: |
-            const prNumber = context.payload.pull_request.number;
-            const { data: pr } = await github.rest.pulls.get({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: prNumber
-            });
-            const count = pr.labels.length;
-            if (count === 0) {
+            const pr = context.payload.pull_request;
+            const hasLabel = (pr.labels || []).length > 0;
+            if (!hasLabel) {
               core.setFailed("PR must include at least one label.");
             }
 
-      - name: Comment & close when invalid
-        if: failure()   # runs only when previous step failed
+      - name: Comment when invalid
+        if: failure()
         uses: actions/github-script@v7
         with:
           script: |
-            const prNumber = context.payload.pull_request.number;
+            const pr = context.payload.pull_request;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: prNumber,
-              body: "Closing: please add at least one label (e.g., NEW FEATURE, BUG FIX, DOCS) and reopen."
-            });
-            await github.rest.pulls.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: prNumber,
-              state: "closed"
+              issue_number: pr.number,
+              body: "⚠️ This PR has no labels. Please add at least one label (e.g., NEW FEATURE, BUG FIX, DOCS)."
             });
