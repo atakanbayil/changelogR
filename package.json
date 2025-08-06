@@ -1,6 +1,6 @@
 {
     "name": "changelogr",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Minimal package to test npm publish and README rendering",
     "type": "module",
     "main": "./index.js",
@@ -13,7 +13,6 @@
         "LICENSE",
         "takeoff-og.jpg"
     ],
-
     "keywords": [
         "example",
         "hello"
