@@ -7,13 +7,18 @@
 [![npm downloads](https://img.shields.io/npm/dm/@takeoff-ui/core.svg)](https://www.npmjs.com/package/@takeoff-ui/core)
 [![license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
 
-Core **Stencil.js Web Components** for TakeOff UI. Standards-based, framework-agnostic components that run anywhere, with first-class bindings for **React**, **Vue**, and **Angular**.
-
-
+Takeoff UI is a comprehensive design system providing framework-agnostic web components developed with **Stencil.js**. The system is managed as a monorepo using **Turborepo**, enabling fast, incremental builds and consistent workflows across multiple packages.
 
 ## Documentation
 Full guides, API, and examples:  
-https://takeoff-ui-blond.vercel.app/docs/Introduction
+https://takeoff-ui-blond.vercel.app
+
+
+## Installation
+https://takeoff-ui-blond.vercel.app/docs/Installation
+
+## Contributing
+https://takeoff-ui-blond.vercel.app/docs/CONTRIBUTING
 
 ## Contributors
 <a href="https://github.com/atakanbayil/changelogR/graphs/contributors">
