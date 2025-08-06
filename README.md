@@ -15,6 +15,4 @@ Full guides, API, and examples:
 https://takeoff-ui-blond.vercel.app/docs/Introduction
 
 ## Contributors
-<a href="https://github.com/atakanbayil/changelogR/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=atakanabayil/changelogR" />
-</a>
+<img src="https://unpkg.com/changelogr@latest/contributors.svg" alt="Contributors" />
