@@ -1,6 +1,6 @@
 {
     "name": "changelogr",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Minimal package to test npm publish and README rendering",
     "type": "module",
     "main": "./index.js",
