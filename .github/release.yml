@@ -2,7 +2,6 @@
 # Controls the "Generate release notes" button output.
 
 changelog:
-  # Hide anything that shouldn't appear as "Other changes".
   exclude:
     autors:
       - dependabot[bot]

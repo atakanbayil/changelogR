@@ -1,0 +1,24 @@
+{
+    "name": "changelogr",
+    "version": "1.0.0",
+    "description": "Minimal package to test npm publish and README rendering",
+    "type": "module",
+    "main": "./index.js",
+    "exports": "./index.js",
+    "license": "MIT",
+    "author": "Atakan Bayil",
+    "files": ["index.js", "README.md", "LICENSE"],
+    "keywords": ["example", "hello"],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/atakanbayil/changelogR.git"
+    },
+    "bugs": {
+      "url": "https://github.com/atakanbayil/changelogR/issues"
+    },
+    "homepage": "https://github.com/atakanbayil/changelogR#readme",
+    "scripts": {
+      "test": "node -e \"import('./index.js').then(m=>console.log(m.hello('test')))\"",
+      "prepublishOnly": "npm test"
+    }
+  }
