@@ -44,3 +44,7 @@ changelog:
     - title: "Breaking Changes 💥"
       labels: 
         - breaking changes
+
+    - title: "Beta Release"
+      labels:
+        - beta
