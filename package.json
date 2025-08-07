@@ -27,6 +27,12 @@
     "homepage": "https://github.com/atakanbayil/changelogR#readme",
     "scripts": {
         "test": "node -e \"import('./index.js').then(m=>console.log(m.hello('test')))\"",
-        "prepublishOnly": "npm test"
+        "prepublishOnly": "npm test",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+        "changelog:first": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+        "version": "npm run changelog && git add CHANGELOG.md"
+    },
+    "devDependencies": {
+        "conventional-changelog-cli": "^4.1.0"
     }
 }
