@@ -1,0 +1,55 @@
+name: Generate Changelog
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  release:
+    types: [published]
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Generate changelog
+        id: changelog
+        run: |
+          npx conventional-changelog-cli@latest --preset angular --release-count 0 --outfile ./CHANGELOG.md --same-file
+          echo "changelog=./CHANGELOG.md" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore: update changelog'
+          title: 'chore: update changelog'
+          body: |
+            This PR updates the changelog with the latest changes.
+            
+            Generated automatically by GitHub Actions.
+          branch: update-changelog
+          delete-branch: true
+          path: ./
+          committer: GitHub <noreply@github.com>
+          author: GitHub <noreply@github.com> 
