@@ -1,6 +1,6 @@
 // Tiny example lib
 export function hello(name = "world") {
-    return `Hello, ${name}!
+    return `Refactored-Hello, ${name}!
     new-feature-to-component();
     `;
 
