@@ -1,7 +1,7 @@
 // Tiny example lib
 export function hello(name = "world") {
     return `Hello, ${name}!
-    new-feature-to-component();
+    NEWnew-feature-to-component();
     `;
 
 
