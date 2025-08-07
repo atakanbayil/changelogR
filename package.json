@@ -15,7 +15,10 @@
     ],
     "keywords": [
         "example",
-        "hello"
+        "hello",
+        "changelog",
+        "ui",
+        "components"
     ],
     "repository": {
         "type": "git",
