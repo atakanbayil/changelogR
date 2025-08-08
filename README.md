@@ -1,6 +1,6 @@
 # @takeoff-ui/core
 
-![Takeoff UI Hero](https://unpkg.com/changelogr@latest/takeoff-og.jpg)# @takeoff-ui/core
+![Takeoff UI Hero](https://unpkg.com/changelogr@latest/takeoff-og.jpg)
 
 
 
@@ -11,7 +11,7 @@
 Takeoff UI is a comprehensive design system providing framework-agnostic web components developed with **Stencil.js**. The system is managed as a monorepo using **Turborepo**, enabling fast, incremental builds and consistent workflows across multiple packages for **React**, **Vue**, **Angular**.
 
 ## Documentation
-Full API reference, guides, and examples are available at [takeoff-ui.com](https://takeoff-ui-blond.vercel.app):  
+Full API reference, guides, and examples are available at [Documentation Guide](https://takeoff-ui-blond.vercel.app)  
 
 
 ## Installation
