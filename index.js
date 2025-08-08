@@ -2,6 +2,7 @@
 export function hello(name = "world") {
     return `Hello, ${name}!
     NEWnew-feature-to-component();
+    newRuleset();
     `;
 
 }
